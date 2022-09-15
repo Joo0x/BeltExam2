@@ -1,3 +1,5 @@
+using System;
+using SUPERCharacter;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,19 +7,40 @@ using UnityEngine.UI;
 public class UI_SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip jumpSound,shoootSound,dyingSound,damageSound,buttonClickSound,levelMusic,victoryMusic;
-    [SerializeField] private Image HPImage;
+    [SerializeField] private AudioClip jumpSound,shoootSound,dyingSound,damageSound,buttonClickSound,loseMusic,victoryMusic;
+    [SerializeField] private Image HPImage,timerImage;
+
+    [SerializeField] private float timer = 60f;
     
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-        HPImage = GetComponent<Image>();
+    }
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+        timerImage.fillAmount = timer / 60 ;
     }
 
     private void OnEnable()
     {
+        SUPERCharacterAIO.JumpHappend += PlayJumpSound;
+        GameStatusMenu.canvasIDevent += ShowCanvas;
+    }
 
+    private void ShowCanvas(int canvasID)
+    {
+        if(canvasID == 1)
+            _audioSource.PlayOneShot(victoryMusic);
+        else if(canvasID == 2)
+            _audioSource.PlayOneShot(loseMusic);
+    }
+
+    private void PlayJumpSound()
+    {
+        _audioSource.PlayOneShot(jumpSound);
     }
 
     private void winSound()
@@ -46,8 +69,7 @@ public class UI_SoundManager : MonoBehaviour
     private void OnDisable()
     {
 
-
-
+        
     }
 
 

@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cae9e908-cbcf-4578-90da-7115661e59a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BeltExam2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BeltExam2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/LevelMusic.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Music/LevelMusic.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/LevelMusic.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Music/LevelMusic.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SUPER Character Controller/SUPER Character Controller/SUPERCharacterAIO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SUPER Character Controller/SUPER Character Controller/SUPERCharacterAIO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01LevelJ.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01LevelJ.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_SoundManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +87,7 @@
       <workItem from="1663198366726" duration="1000" />
       <workItem from="1663199614433" duration="4486000" />
       <workItem from="1663219158490" duration="2248000" />
-      <workItem from="1663225909600" duration="5740000" />
+      <workItem from="1663225909600" duration="9012000" />
     </task>
     <servers />
   </component>

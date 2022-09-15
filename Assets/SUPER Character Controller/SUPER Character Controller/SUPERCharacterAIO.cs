@@ -12,7 +12,6 @@ using UnityEditor;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 #endif
-
 ///TODO
 // Better implement the new input system.
 // create compatibility layers for Unity 2017 and 2018
@@ -294,6 +293,8 @@ public class SUPERCharacterAIO : MonoBehaviour{
     [Space(18)]
     public bool enableGroundingDebugging = false, enableMovementDebugging = false, enableMouseAndCameraDebugging = false, enableVaultDebugging = false;
     #endregion
+    
+    public static event System.Action JumpHappend;
     void Start(){
    
         
@@ -867,6 +868,8 @@ public class SUPERCharacterAIO : MonoBehaviour{
             (Time.time>(jumpBlankingPeriod+0.1f)) &&
             (currentStance == Stances.Standing)){
                 Jumped = true;
+                JumpHappend?.Invoke();
+                Debug.Log("juimp");
                 p_Rigidbody.velocity =(Vector3.right * p_Rigidbody.velocity.x) + (Vector3.forward * p_Rigidbody.velocity.z);
                 p_Rigidbody.AddForce(Vector3.up*(Force/10),ForceMode.Impulse);
                 if(enableStaminaSystem && jumpingDepletesStamina){
