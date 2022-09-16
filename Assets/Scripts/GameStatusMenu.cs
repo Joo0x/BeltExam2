@@ -7,7 +7,7 @@ public class GameStatusMenu : MonoBehaviour
 {
     public static event Action<int> canvasIDevent;
     [SerializeField] private int canvasID;
-    
+
     private void OnTriggerEnter(Collider other)
     {
         Cursor.visible = true;

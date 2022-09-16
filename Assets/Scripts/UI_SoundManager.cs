@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UI_SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip jumpSound,shoootSound,dyingSound,damageSound,buttonClickSound,loseMusic,victoryMusic;
+    [SerializeField] private AudioClip jumpSound,shoootSound,dyingSound,doorOpenSound,buttonClickSound,loseMusic,victoryMusic;
     [SerializeField] private Image HPImage,timerImage;
 
     [SerializeField] private float timer = 60f;
@@ -28,6 +28,7 @@ public class UI_SoundManager : MonoBehaviour
     {
         SUPERCharacterAIO.JumpHappend += PlayJumpSound;
         GameStatusMenu.canvasIDevent += ShowCanvas;
+        CheckList.DoorUnlock += PlayDoorOpen;
     }
 
     private void ShowCanvas(int canvasID)
@@ -55,21 +56,16 @@ public class UI_SoundManager : MonoBehaviour
         _audioSource.PlayOneShot(buttonClickSound);
     }
 
-    private void DamageSound(float currentHealth)
+    private void PlayDoorOpen()
     {
-        HPImage.fillAmount = currentHealth / 10;
-        _audioSource.PlayOneShot(damageSound);
-    }
 
-    private void JumpSound()
-    {
-        _audioSource.PlayOneShot(jumpSound);
+        _audioSource.PlayOneShot(doorOpenSound);
     }
-
+    
     private void OnDisable()
     {
-
-        
+        SUPERCharacterAIO.JumpHappend -= PlayJumpSound;
+        GameStatusMenu.canvasIDevent -= ShowCanvas;
     }
 
 
