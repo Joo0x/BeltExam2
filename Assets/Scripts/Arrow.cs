@@ -2,10 +2,10 @@ using System;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Arrow : MonoBehaviour
 {
     private Rigidbody _rigidbody;
-    public delegate void OnDisableCallback(Bullet Instance);
+    public delegate void OnDisableCallback(Arrow Instance);
     public OnDisableCallback Disable ;
     private float lifeSpanMax = 2f,lifespan;
 

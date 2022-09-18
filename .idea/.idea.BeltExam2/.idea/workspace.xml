@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cae9e908-cbcf-4578-90da-7115661e59a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BeltExam2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BeltExam2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01LevelB.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01LevelB.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameStatusMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameStatusMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Asia.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Asia.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FadeIn.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FadeIn.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SUPER Character Controller/SUPER Character Controller/Presets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SUPER Character Controller/SUPER Character Controller/Sounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01LevelJ.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01LevelJ.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArrowPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ArrowPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArrowPool.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ArrowPool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +28,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CheckList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStatusMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.2/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -45,6 +55,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="E:/New folder\BeltExam2.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="E:\New folder" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\SDA\Projects\BeltExam2\BeltExam2 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
@@ -101,6 +119,8 @@
       <workItem from="1663352386981" duration="11000" />
       <workItem from="1663353425291" duration="5560000" />
       <workItem from="1663359718010" duration="256000" />
+      <workItem from="1663533177502" duration="2000" />
+      <workItem from="1663537850711" duration="4840000" />
     </task>
     <servers />
   </component>

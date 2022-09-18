@@ -1,21 +1,25 @@
     using System;
+    using System.Collections;
     using UnityEngine;
-    using UnityEngine.InputSystem;
     using UnityEngine.Pool;
 
-    public class BulletPool : MonoBehaviour
-    {
-        [SerializeField] private Bullet _bulletPrefab;
-        [SerializeField] private Transform bulletSpawnPoint;
-        [SerializeField] private float bulletSpeed = 40;
-        public static event Action ShootHappend;
-        private ObjectPool<Bullet> bulletPool;
 
+    public class ArrowPool : MonoBehaviour
+    {
+        [SerializeField] private Arrow _arrowPrefab;
+        [SerializeField] private Transform arrowSpawnPoint;
+        [SerializeField] private float arrowSpeed = 40;
+        private bool asiaIsAttacking = false;
+        private Animator _animator;
+        public static event Action ShootHappend;
+        private ObjectPool<Arrow> arrowPool;
+        private static readonly int Attack = Animator.StringToHash("Attack");
 
 
         private void Awake()
         {
-            bulletPool = new ObjectPool<Bullet>(
+            _animator = GetComponent<Animator>();
+            arrowPool = new ObjectPool<Arrow>(
                 CreatePooledObject,
                 OnTakeFromPool,
                 OnReturnToPool,
@@ -24,49 +28,61 @@
                 10,
                 20);
         }
-        
 
-        void OnShoot(InputValue input)
+        private void Update()
         {
-            ShootHappend?.Invoke();
-            bulletPool.Get();
+
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !asiaIsAttacking)
+            {
+                asiaIsAttacking = true;
+                _animator.SetBool(Attack,true);
+                StartCoroutine("ShoorArrow");
+            }
+        }
+
+        private IEnumerator ShoorArrow()
+        {
+            yield return new WaitForSeconds(1.6f);
+            arrowPool.Get();
+            _animator.SetBool(Attack,false);
+            asiaIsAttacking = false;
+        }
+
+
+        void SpawnBullet(Arrow obj)
+        {
+            var arrow = arrowPool.Get();
+            arrow.Shoot(arrowSpawnPoint.transform.position,gameObject.transform.forward , arrowSpeed);
         }
         
 
-        void SpawnBullet(Bullet obj)
-        {
-            var bullet = bulletPool.Get();
-            bullet.Shoot(bulletSpawnPoint.transform.position,gameObject.transform.forward , bulletSpeed);
-        }
-        
-
-        private void OnDestroyObject(Bullet obj)
+        private void OnDestroyObject(Arrow obj)
         {
             Destroy(obj.gameObject);
         }
 
-        private void OnReturnToPool(Bullet obj)
+        private void OnReturnToPool(Arrow obj)
         {
             obj.gameObject.SetActive(false);
         }
 
-        private void OnTakeFromPool(Bullet obj)
+        private void OnTakeFromPool(Arrow obj)
         {
             obj.gameObject.SetActive(true);
-            obj.Shoot(bulletSpawnPoint.transform.position,gameObject.transform.forward , 20);
+            obj.Shoot(arrowSpawnPoint.transform.position,gameObject.transform.forward , 20);
         }
 
-        Bullet CreatePooledObject()
+        Arrow CreatePooledObject()
         {
-            Bullet bullet = Instantiate(_bulletPrefab, Vector3.zero, Quaternion.identity);
-            bullet.Disable += KillBullet;
-            bullet.gameObject.SetActive(false);
+            Arrow arrow = Instantiate(_arrowPrefab, Vector3.zero, Quaternion.identity);
+            arrow.Disable += KillArrow;
+            arrow.gameObject.SetActive(false);
 
-            return bullet;
+            return arrow;
         }
 
-        void KillBullet(Bullet obj)
+        void KillArrow(Arrow obj)
         {
-            bulletPool.Release(obj);
+            arrowPool.Release(obj);
         }
     }
