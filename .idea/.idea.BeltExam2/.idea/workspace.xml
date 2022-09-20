@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cae9e908-cbcf-4578-90da-7115661e59a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BeltExam2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BeltExam2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Hovl Studio/Resources/Materials/Plus1bcg.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Hovl Studio/Resources/Materials/Plus1bcg.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Hovl Studio/Resources/Materials/Shield2bcg.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Hovl Studio/Resources/Materials/Shield2bcg.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/01LevelB.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01LevelB.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameStatusMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameStatusMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_SoundManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CheckList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChestPieces.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStatusMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.2/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -46,7 +45,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\SDA\Projects\BeltExam2\BeltExam2 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\SDA\Projects\BeltExam2\BeltExam2" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -101,6 +100,7 @@
       <workItem from="1663352386981" duration="11000" />
       <workItem from="1663353425291" duration="5560000" />
       <workItem from="1663359718010" duration="256000" />
+      <workItem from="1663597579847" duration="5123000" />
     </task>
     <servers />
   </component>
@@ -110,6 +110,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
