@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class ChestPuzzle : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _particle;
     [SerializeField] private UnityEvent _onPuzzleStart;
     [SerializeField] private UnityEvent _onPuzzleComplete;
+    public static event Action DoorUnlock;
     private int puzzlePieces;
     
     private void OnTriggerEnter(Collider other)
@@ -27,6 +29,7 @@ public class ChestPuzzle : MonoBehaviour
         if (puzzlePieces >= 4)
         {
             _onPuzzleComplete.Invoke();
+            DoorUnlock?.Invoke();
         }
     }
 }

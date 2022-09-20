@@ -8,9 +8,7 @@ public class UI_SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip jumpSound,shoootSound,dyingSound,doorOpenSound,buttonClickSound,loseMusic,victoryMusic;
-    [SerializeField] private Image HPImage,timerImage;
 
-    [SerializeField] private float timer = 60f;
     
 
     private void Awake()
@@ -18,17 +16,12 @@ public class UI_SoundManager : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    private void Update()
-    {
-        timer -= Time.deltaTime;
-        timerImage.fillAmount = timer / 60 ;
-    }
-
     private void OnEnable()
     {
         SUPERCharacterAIO.JumpHappend += PlayJumpSound;
         GameStatusMenu.canvasIDevent += ShowCanvas;
         CheckList.DoorUnlock += PlayDoorOpen;
+        ChestPuzzle.DoorUnlock += PlayDoorOpen;
     }
 
     private void ShowCanvas(int canvasID)
